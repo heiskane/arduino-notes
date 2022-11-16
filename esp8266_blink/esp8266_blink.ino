@@ -15,6 +15,8 @@ void loop() {
 
   if (current_millis - previous_millis >= sleep_interval) {
     Serial.println("Going to sleep...");
+
+    // ESP Can be woken up by pullin RST pin low
     ESP.deepSleep(0);
   }
 
